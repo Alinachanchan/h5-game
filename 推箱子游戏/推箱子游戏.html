@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>推箱子游戏</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/推箱子游戏.js"></script>
+    <link href="推箱子游戏.css" type="text/css" rel="stylesheet">
+</head>
+<body onkeyup="Keytest(event)">
+    <div id="main">
+        <div id="main_menu">
+            <ul>
+                <li>选择关卡</li>
+                <li>游戏说明</li>
+                <li>排行榜</li>
+            </ul>
+        </div>
+        <!--选择关卡-->
+
+        <!--游戏说明-->
+        <div class="game_description"></div>
+        <div class="Ranking"></div>
+    </div>
+    <div class="chooseLevel">
+        <div level="1" ><span>第一关</span></div>
+        <div level="2" ><span>第二关</span></div>
+        <div level="3" ><span>第三关</span></div>
+        <div level="4" ><span>第四关</span></div>
+        <div level="5" ><span>第五关</span></div>
+        <div level="6" ><span>第六关</span></div>
+
+
+    </div>
+
+     <div class="wrapper">
+         <div class="game_wrapper">
+             <div class="count_panel">
+                 <div class="showStep"></div>
+                 <div class="showmatch"></div>
+                 <div class="showtime"></div>
+                 <span>时间进度条</span>
+             </div>
+             <div class="game_panel">
+                 <!--1-->
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+
+
+                 <!--2-->
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+
+                 <!--3-->
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+
+
+                 <!--  4-->
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+
+
+                 <!-- 5-->
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+
+
+
+                 <!-- 6 -->
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+
+
+
+                 <!--7-->
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+
+
+                 <!--8-->
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+
+
+                 <!--9-->
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0" ></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+                 <div class="gameblock " sign="0"></div>
+
+             </div>
+             <div class="button_panel">
+                 <button id="stepBack">回退</button>
+                 <button id="puaseGame">暂停</button>
+                 <button id="exitGame">退出</button>
+                 <button id="showRanking" onclick="showranking()">查看本关排行榜</button>
+                 <button id="showHistory " onclick="showhistory()">查看本关游戏历史记录</button>
+                 <div id="start"></div>
+                 <div id="pause"></div>
+                 <form id="setup">
+
+                     <input id="input1" type="text" name="steplimit" value="" onblur="checkNum(this)"/>步
+                     <br />
+                     <input id="input2" type="text" name="lastname" value=""onblur="checkNum(this)"/>秒
+                 </form>
+             </div>
+             <div class="score">
+                 <div class="history"></div>
+                 <div class="ranking"></div>
+             </div>
+         </div>
+         <div id="judget">
+             <div>
+                 <button id="tomainMenu">主菜单</button>
+                 <button id="nextLevel">下一关</button>
+                 <button id="chooseAgain">重新选关</button>
+                 <button id="playAgain">重玩此关</button>
+             </div>
+             <img src="img/奖杯.png">
+             <div class="show_score"></div>
+         </div>
+         <div id="show"> </div>
+     </div>
+
+
+
+     <div class="derection" style="display: none">
+         <button type="button" class="up" >上</button>
+         <button type="button" class="left" >左 </button>
+         <button type="button" class="down">下</button>
+         <button type="button" class="right" >右</button>
+     </div>
+
+
+</body>
+</html>

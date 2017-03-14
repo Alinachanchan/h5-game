@@ -1,0 +1,498 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body { font-family:  Arial, Helvetica, sans-serif; color:#191919;  text-align:center; }
+.wrapper{
+    width: 100%;
+    height: 678px;
+    background-image: url("img/游戏背景.png");
+    position: relative;
+    overflow: hidden;
+}
+.game_wrapper{
+    width: 550px;
+    height: 450px;
+    border:outset 5px brown;
+    position: relative;
+    margin: 0px auto;
+    top:100px;
+
+}
+.count_panel{
+    position: absolute;
+    top:-105px;
+    height: 100px;
+    width: 550px;
+}
+.showStep{
+    width: 109px;
+    height: 100px;
+    background-image: url("img/显示剩余步数.png");
+    animation: animation1 1s ease-in;
+    animation-iteration-count: infinite;
+    line-height: 130px;
+    text-align: center;
+}
+.showtime{
+    position: absolute;
+    top: 60px;
+    left: 260px;
+    background-color: bisque;
+    width: 200px;
+    height: 30px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px #888888;
+    transition: width 1s ease-in;
+    animation: animation2 0.5s ease-out;
+    animation-iteration-count: infinite;
+}
+.showtime + span{
+    color: white;
+    box-shadow: 2px 0px 10px white ;
+    display: block;
+    position: absolute;
+    right: 5px;
+    margin-top: -30px;
+}
+.warning{
+    animation: animation5  0.8s ease-in;
+    animation-iteration-count: infinite;
+}
+.showmatch{
+    position: absolute;
+    left: 109px;
+    top:0px;
+    margin-left: 20px;
+    width: 130px;
+    height: 100px;
+    background-image: url("img/已送礼物.png");
+    animation: animation1 1s ease-out;
+    animation-iteration-count: infinite;
+    line-height: 135px;
+}
+@keyframes animation1{
+    0%{transform: scale(0.95) rotate(0deg);  }
+    25%{transform: scale(0.98) rotate(6deg);  }
+    50%{transform: scale(1) rotate(0deg);  }
+    75%{transform: scale(0.98) rotate(-6deg);  }
+    100%{transform: scale(0.95) rotate(0deg);  }
+}
+@keyframes animation2{
+    0%{transform: scale(0.95) rotate(0deg);  }
+    25%{transform: scale(0.98) rotate(1deg);  }
+    50%{transform: scale(1) rotate(0deg);  }
+    75%{transform: scale(0.98) rotate(-1deg);  }
+    100%{transform: scale(0.95) rotate(0deg);  }
+}
+ .gameblock{
+    width: 50px;
+    height: 50px;
+    float: left;
+
+}
+ .normal{
+     background-image: url("img/-1.png");
+ }
+.floor{
+    background-image: url("img/雪花.png");
+}
+ .man{
+     background-image: url("img/圣诞老人.png");
+ }
+
+ .room{
+     background-image: url("img/圣诞屋.png");
+ }
+
+ .wall{
+     background-image: url("img/墙壁.png");
+ }
+
+ .gift1{
+     background-image: url("img/gift1.png");
+ }
+ .gift2{
+     background-image: url("img/gift2.png");
+ }
+ .gift3{
+     background-image: url("img/gift3.png");
+ }
+ .gift4{
+     background-image: url("img/gift4.png");
+ }
+ .gift5{
+     background-image: url("img/gift5.png");
+ }
+ .gift6{
+     background-image: url("img/gift6.png");
+ }
+.match{
+    background-image: url("img/成功.gif");
+}
+.man_room{
+    background-image: url("img/圣诞老人来到圣诞屋.png");
+}
+
+#main{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 678px;
+    background-image: url("img/主菜单背景.png");
+    z-index: 1;
+    overflow: hidden;
+}
+
+#main_menu{
+    position: absolute;
+    top:177px;
+    left: 35%;
+}
+#main_menu > ul{
+    list-style-type: none;
+}
+#main_menu li{
+    background-image: url("img/按钮.png");
+    width: 260px;
+    height: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 100px;
+    font-family: "Adobe 明體 Std L";
+    font-size: 200%;
+    font-weight: bolder;
+    color: bisque;
+    animation: animation1 1s ease-out;
+    animation-iteration-count: infinite;
+    transition: 0.5s ease-in;
+    cursor: pointer;
+}
+#main_menu li:hover{
+    margin-left: 35px ;
+    color: darkorange;
+    text-shadow: bisque;
+}
+.game_description{
+    width: 541px;
+    height: 345px;
+    position: absolute;
+    background-image: url("img/游戏规则.png");
+    right: 10px;
+    top: -345px;
+    transition: top 0.5s ease-in;
+}
+.game_description.show{
+    top: 200px;
+    animation: animation3  1s ease-out;
+}
+.chooseLevel{
+    position: absolute;
+    right: 150px;
+    top:-398px;
+    width: 276px;
+    height: 298px;
+    padding: 50px;
+    padding-top: 100px;
+    padding-bottom: 0px;
+    background-image: url("img/地图背景.png");
+    z-index: 10;
+    transition: top 0.5s linear,right 0.5s linear;
+}
+
+.chooseLevel._show{
+    top:50px;
+    left: 10px;
+    animation: animation1 1s linear 0.5s;
+    animation-iteration-count:infinite;
+}
+.chooseLevel.show{
+    top: 50px;
+    animation: animation3  1s ease-out;
+}
+@keyframes animation3{
+    0% {transform: scale(1, 0); }
+    25%{transform: scale(1, 1.2); }
+    50%{transform: scale(1, 0.85);}
+    75%{transform: scale(1, 1.05);}
+    100%{transform: scale(1, 1);}
+}
+.chooseLevel div {
+    position:relative;
+    float:left;
+    width:50px; height:50px; overflow:hidden;
+    margin: 30px 20px;
+    line-height:50px;
+    text-align:center;
+    font-size:10px;
+    text-decoration:none;
+    overflow:hidden;
+    cursor:pointer;
+    color:#fff;
+    background:#000;
+
+    /* border-radius  */
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+
+    /* text-shadow */
+    -webkit-text-shadow:0 -1px 1px rgba(0,0,0,0.5);
+    -moz-text-shadow:0 -1px 1px rgba(0,0,0,0.5);
+    text-shadow:0 -1px 1px rgba(0,0,0,0.5);
+
+    /* box-shadow */
+    -webkit-box-shadow:0 5px 10px rgba(0,0,0,0.75);
+    -moz-box-shadow:0 5px 10px rgba(0,0,0,0.75);
+    box-shadow:0 5px 10px rgba(0,0,0,0.75);
+
+    /* circle transitions (shadow and top) */
+    -webkit-transition:-webkit-box-shadow 0.2s ease-out, top 0.2s ease-out;
+    -moz-transition:-moz-box-shadow 0.2s ease-out, top 0.2s ease-out;
+    -o-transition:box-shadow 0.3s ease-out, top 0.2s ease-out;
+    transition:box-shadow 0.3s ease-out, top 0.2s ease-out;
+}
+.chooseLevel > div:hover {
+    top:-10px; left:0;
+    -webkit-box-shadow:0 20px 30px rgba(0,0,0,0.5);
+    -moz-box-shadow:0 20px 30px rgba(0,0,0,0.5);
+    box-shadow:0 20px 30px rgba(0,0,0,0.5);
+}
+.chooseLevel > div span {
+    display:block;
+    position:relative;
+    overflow:hidden;
+    width:50px;
+    height:50px;
+
+
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+
+    /*-webkit-box-shadow:inset 0 -10px 40px rgba(0,0,0,0.75); /* chrome5 inset parameter doesn't fully work */
+    -moz-box-shadow:inset 0 -10px 40px rgba(0,0,0,0.75);
+    box-shadow:inset 0 -10px 40px rgba(0,0,0,0.75);
+
+    /* inner shadow transitions */
+    -webkit-transition:background 0.3s ease-out;  /* doesn't work, but maybe in future */
+    -o-transition:box-shadow 0.3s ease-out;
+    -moz-transition:-moz-box-shadow 0.3s ease-out;
+    transition:box-shadow 0.3s ease-out;
+
+    background:-webkit-gradient(radial, 50 40, 30, center center, 80, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.75))); /* use gradient instead */
+
+}
+.chooseLevel div:hover span {
+    /*-webkit-box-shadow:inset 0 -10px 30px rgba(0,0,0,0.75);*/
+    -moz-box-shadow:inset 0 -10px 30px rgba(0,0,0,0.75);
+    box-shadow:inset 0 -10px 30px rgba(0,0,0,0.75);
+
+    background:-webkit-gradient(radial, 50 30, 40, center center, 80, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.75))); /* use gradient instead */
+}
+.chooseLevel>div:nth-child(1) { background:#d010aa }
+.chooseLevel>div:nth-child(2) { background:#1066d0 }
+.chooseLevel>div:nth-child(3) { background:#30d010 }
+.chooseLevel>div:nth-child(4) { background:#d04610 }
+.chooseLevel>div:nth-child(5) { background:#d099ff }
+.chooseLevel>div:nth-child(6) { background:#ff0000 }
+.chooseLevel>div:nth-child(7) { background:#00ff10 }
+.chooseLevel>div:nth-child(8) { background:#ff0000 }
+.chooseLevel>div:nth-child(9) { background:#800f60 }
+
+.button_panel > button{
+   background-color: antiquewhite;
+    height: 40px;
+    padding: 0px 20px;
+    margin-top: 8px;
+    border-radius: 20px;
+    color: darkred;
+    box-shadow: 3px 0px 10px white;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+.button_panel > button:hover{
+    box-shadow:5px 0px 20px white ;
+    transform: scale(1.05);
+}
+#start {
+    position: absolute;
+    right: 150px;
+    top: -350px;
+    background-image: url("img/点击开始.png");
+    width: 250px;
+    height: 250px;
+    transition: top 0.8s ease-out;
+    cursor: pointer;
+}
+#pause{
+    position: absolute;
+    right: 80px;
+    top: -400px;
+    background-image: url("img/点击继续.png");
+    width: 340px;
+    height: 340px;
+    transition: top 0.8s ease-out;
+    cursor: pointer;
+}
+#start.show{
+    right: 150px;
+    top:130px;
+    animation: animation2 0.5s ease-out;
+    animation-iteration-count: infinite;
+}
+#pause.show{
+    right: 80px;
+    top:40px;
+    animation: animation2 0.5s ease-out;
+    animation-iteration-count: infinite;
+}
+#judget{
+    top:75px;
+    left: -215px;
+    width: 0px;
+    height: 0px;
+    background-image: url("img/游戏结束对话框.png");
+    position: absolute;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow: hidden;
+}
+#judget.show{
+    width: 390px;
+    height: 259px;
+    top:150px;
+    left:430px;
+    animation: animation3 0.5s ease-out;
+}
+#judget.win{
+
+}
+#judget.lose{
+
+}
+#judget.stop{
+
+}
+#judget button{
+    width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px black;
+    position: relative;
+    top:150px;
+    margin: 5px 30px;
+    background-image: url("img/墙壁.png");
+    cursor: pointer;
+    color: whitesmoke;
+    font-size: 20px;
+    transition: all 0.2s ease-in;
+}
+#judget button:hover{
+    transform: translate(20px,0px);
+    box-shadow: 5px 5px 30px brown ;
+
+}
+#judget div:last-child{
+    position:absolute ;
+    width: 390px;
+    height: 100px;
+    top:50px;
+    color: whitesmoke;
+    font-size: 29px;
+}
+#judget img{
+    position: absolute;
+    width: 0;
+}
+#judget img.show{
+    animation: animation4 2s ease-in ;
+    left: 175px;top:105px;width: 100px;height: 100px;
+}
+@keyframes animation4{
+   0%{left: 225px;  top:155px;  width:0px;  height: 0px;}
+    50%{left: 225px;  top:155px;  width:0px;  height: 0px;}
+    75%{ left:75px;
+        top:4px;
+        width: 300px;
+        height: 300px;
+    }
+    100%{left: 175px;top:105px;width: 100px;height: 100px;
+    }
+}
+@keyframes animation5{
+    0%{transform: scale(0.95) rotate(0deg); opacity: 1; }
+    25%{transform: scale(0.98) rotate(6deg);  }
+    50%{transform: scale(1) rotate(0deg);  opacity: 0;}
+    75%{transform: scale(0.98) rotate(-6deg);  }
+    100%{transform: scale(0.95) rotate(0deg);  opacity: 1;}
+
+}
+#show{
+    position: absolute;
+    right: -400px;
+    top:-500px;
+    width:210px;
+    height: 339px;
+    border: red 1px solid;
+    background-image: url("img/排行榜.png");
+    padding: 70px;
+    transition: all 0.5s ease-in;
+}
+#show.show{
+    top:60px;
+    right: 10px;
+    animation: animation2 0.5s ease-out 0.5s;
+    animation-iteration-count: 2;
+}
+.Ranking{
+    position: absolute;
+    background-image: url("img/排行榜_.png");
+    width: 530px;
+    height: 325px;
+    right: 15px;
+    top:-400px;
+    padding-top: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    transition: all 0.5s ease-in;
+    overflow: scroll;
+}
+.Ranking.show{
+    top:150px;
+    animation: animation3  1s ease-out;
+}
+#setup{
+    position: relative;
+    background-image: url("img/设置难度.png");
+    border-radius: 10px;
+    width: 313px;
+    height: 157px;
+    top:-550px;
+    left:-350px;
+    text-align: left;
+    color: black;
+    text-decoration: solid;
+    font-family: "Adobe 明體 Std L";
+    font-weight: 500;
+    display:none;
+
+}
+#setup input{
+    position: relative;
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px black;
+    margin-top: 25px;
+    margin-left: 150px;
+    transition: all 0.5s ease-in;
+    text-align: center;
+    margin-right: 5px;
+}
+#setup input:hover{
+    box-shadow: 8px 8px 25px black;
+    left: 2px;
+}
