@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五子棋人机对弈</title>
+    <style>
+        #mycanvas{
+            display: block;
+            margin: 50px auto;
+            box-shadow: -2px -2px 2px #444,5px 5px 5px #444 ;
+        }
+		button{
+		position:absolute;
+		top:50px;
+		left:50px;
+		}
+    </style>
+</head>
+<body>
+<canvas id="mycanvas"></canvas>
+<script type="text/javascript" src="index.js" ></script>
+
+
+<button onclick="test()">再来一遍</button>
+<script>
+
+function test(){
+    
+    init();
+    drawChessboard();
+}
+</script>
+</body>
+</html>
